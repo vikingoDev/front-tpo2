@@ -19,12 +19,12 @@ const productos = [
     { id: 8, nombre: "Pelacables", precio: 8000, img: "./img/pelacables.jpg" },
     { id: 9, nombre: "Pinza", precio: 9000, img: "./img/pinza.jpg" },
     { id: 10, nombre: "Pinza de punta", precio: 10000, img: "./img/pinzapunta.jpg" },
-    { id: 10, nombre: "Ponchadora", precio: 10000, img: "./img/ponchadora.jpg" },
-    { id: 10, nombre: "Precintos", precio: 10000, img: "./img/precintos.jpg" },
-    { id: 10, nombre: "Ficha RJ45", precio: 10000, img: "./img/rj45.jpg" },
-    { id: 10, nombre: "Tester", precio: 10000, img: "./img/tester.jpg" },
-    { id: 10, nombre: "Tester de red", precio: 10000, img: "./img/testerred.jpg" },
-    { id: 10, nombre: "Probador de cables", precio: 10000, img: "./img/viru.jpg" },
+    { id: 11, nombre: "Ponchadora", precio: 10000, img: "./img/ponchadora.jpg" },
+    { id: 12, nombre: "Precintos", precio: 10000, img: "./img/precintos.jpg" },
+    { id: 13, nombre: "Ficha RJ45", precio: 10000, img: "./img/rj45.jpg" },
+    { id: 14, nombre: "Tester", precio: 10000, img: "./img/tester.jpg" },
+    { id: 15, nombre: "Tester de red", precio: 10000, img: "./img/testerred.jpg" },
+    { id: 16, nombre: "Probador de cables", precio: 10000, img: "./img/viru.jpg" },
 ];
 
 // Carrito (inicializado desde localStorage si existe)
