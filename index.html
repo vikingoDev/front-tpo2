@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- ICON -->
+        <div id="logo"><img src="img/toolboxicon.png" alt="#" height="100px" width="100px"></div>
+        <div class="nombreGrupo"></div>
+        <!-- TITLE -->
+        <div class="title glow" id="tit1">
+            <h1><b>Bienvenido a E-TOOLBOX</b></h1>
+        </div>
+        <div class="title" data-bs-toggle="modal" data-bs-target="#moddy" id="tit2">
+            <p>(<u>Pero... qué es E-TOOLBOX?</u>)</p>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+        <!-- INPUTS -->
+        <div id="filtro" class="finder col-sm-9">
+            <!-- INPUT NEW ELEMENT -->
+            <div class="newElement">
+                <p>Buscar producto</p>
+                <input id="elemInput" type="text" placeholder="Buscar productos...">
+            </div>
+        </div>
+
+        <!-- Elementos generados a partir del JSON -->
+        <div class="items col-sm-6 row render">
+            <div id="productos"></div>
+        </div>
+        <!-- Carrito -->
+        <div id="cartSide" class="cart col-sm-3">
+            <h2>Carrito</h2>
+            <!-- Botones -->
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <button id="finalizar-compra">Finalizar Compra</button>
+            <!-- Items del carrito -->
+            <ul id="carrito" class="list-group">
+                <ul id="cart-items"></ul>
+                <p id="total">Total: $0</p>
+            </ul>
+            <!-- Precio total -->
+            <p class="text-right">Total: <span id="total"></span> AR$</p>
+        </div>
+
+        <!-- MODAL DESCRIPTION -->
+        <div class="modal fade" id="moddy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="modal-title fst-italic fs-5" id="exampleModalLabel">Acerca de E-TOOLBOX</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>E-TOOLBOX es una herramienta pensada para facilitar los pedidos internos de materiales o
+                            recursos en cualquier empresa.</p>
+                        <p>Normalmente, antes de poder comenzar un trabajo un técnico (informático, en este ejemplo) se
+                            vería obligado a hacer un pedido de elementos a un supervisor o responsable (verbalmente,
+                            vía mail, o ambos) el cual repitiría el mismo procedimiento siguiendo un complejo nivel
+                            jerárquico, hasta que este pedido de materiales llegara al sector encargado de las compras
+                            y/o responsable de proveer al personal de las herramientas necesarias. Esto genera demoras y
+                            entorpece un proceso tan simple como pedir una herramienta, comprarla y entregarla.</p>
+                        <p>E-TOOLBOX provée la solución, dando no solo un entorno eficaz para la selección y búsqueda de
+                            los instrumentos necesarios, sino múltiples formas de extraer y remitir la información
+                            (imprimirlo, enviarlo por correo, o a un servidor/ terminal). Es intuitivo, práctico y
+                            dinámico.</p>
+                        <p>Una herramienta que puede ser adaptada a todo tipo de industria y entorno que se requiera con
+                            solo incorporar los elementos requeridos como base de datos.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
