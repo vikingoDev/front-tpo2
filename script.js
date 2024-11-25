@@ -62,7 +62,7 @@ const prodFilter = (evento) => {
         <img src="${producto.img}" alt="${producto.nombre}" />
         <h4>${producto.nombre}</h4>
         <p>Precio: $${producto.precio}</p>
-        <button class="add-to-cart" data-id="${producto.id}">Agregar al carrito</button>
+        <button class="add-to-cart btn btn-warning" data-id="${producto.id}">Agregar al carrito</button>
       </div>
     `
         )
