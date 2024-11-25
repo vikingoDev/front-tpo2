@@ -16,19 +16,12 @@
     <header>
         <!-- ICON -->
         <div id="logo"><img src="img/toolboxicon.png" alt="#" height="100px" width="100px"></div>
-        <div class="nombreGrupo"></div>
-        <!-- TITLE -->
-        <div class="title glow" id="tit1">
-            <h1><b>Bienvenido a E-TOOLBOX</b></h1>
-        </div>
-        <div class="title" data-bs-toggle="modal" data-bs-target="#moddy" id="tit2">
-            <p>(<u>Pero... qué es E-TOOLBOX?</u>)</p>
-        </div>
-
         <!-- Buscador de elementos -->
         <div id="filtro" class="finder">
             <input id="elemInput" type="text" placeholder="Ingrese el nombre de su producto">            
         </div>
+        <!-- TITLE -->        
+        <div class="nombreGrupo title glow"></div>
     </header>
 
     <!-- Main -->
@@ -41,8 +34,8 @@
         <div id="cartSide" class="cart">
             <h2>Carrito</h2>
             <!-- Botones -->
-            <button id="vaciar-carrito">Vaciar Carrito</button>
-            <button id="finalizar-compra">Finalizar Compra</button>
+            <button id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</button>
+            <button id="finalizar-compra" class="btn btn-success">Finalizar Compra</button>
             <!-- Precio total -->
             <p class="text-right"><span id="total"></span> AR$</p>
             <!-- Items del carrito -->

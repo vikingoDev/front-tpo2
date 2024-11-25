@@ -1,17 +1,19 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  
+
 }
 
 header {
-  display: flex;
   width: 100%;
-  height: 130px;
+  height: 10em;
   position: fixed;
-  background: #a20606;
+  background: maroon;
   top: 0;
   z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .glow {
@@ -22,17 +24,36 @@ header .glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff;
   }
+
   to {
     text-shadow: 0 0 15px #fff;
   }
 }
 
-.container {    
-  max-width: 100% !important;
+#logo {
+  margin-left: 2em;  
+}
+
+.container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 3rem;
-  margin-top: 10%;
+  margin-top: 10em;
+}
+
+#elemInput {
+  width: 25em;
+  height: 2.5em;
+  border: none;
+  border-radius: 25px;
+  padding: 0 0 0.2em 0.8em;
+  font-size: 1.2em;
+}
+
+.nombreGrupo {
+  font-size: 3em;
+  color: white;
+  margin-right: 1em;
 }
 
 .render,
@@ -48,16 +69,41 @@ header .glow {
   gap: 20px;
 }
 
-/* .cart {
-  max-width: fit-content;
-  max-height: fit-content;  
+#cartSide {
+  text-align: center;
+  max-width: 25em;
+  max-height: 32em;
+  padding: 15px;
+}
+
+#cart-items {
+  scrollbar-width: none;
+}
+
+/* #vaciar-carrito,
+#finalizar-compra {
+
 } */
+
+.text-right {
+  margin: 0.7em;
+}
+
+#delete-button {
+  margin-right: 0.8em;
+}
 
 #carrito {
   overflow-y: auto;
   max-height: 350px;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
+}
+
+#cart-items {
+  overflow-y: scroll;
+  padding: 0;
 }
 
 #productos {
@@ -101,4 +147,27 @@ button:hover {
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
+}
+
+/* Desde 1081px a 1440px */
+@media (min-width: 1081px) and (max-width: 1440px) {
+  .item-name, .text-right, #vaciar-carrito, #finalizar-compra, #delete-button, .producto {
+    font-size: 0.75em;
+  }
+  .cart h2, .producto h4 {
+    font-size: 1.5em;
+  }
+  #addCart {
+    font-size: 1em;
+  }
+  .container {
+    margin-top: 11em;
+  }
+}
+
+/* Desde 1441px a 1919px */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .container {
+    margin-top: 11em;
+  }
 }

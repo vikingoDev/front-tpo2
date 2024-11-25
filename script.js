@@ -24,7 +24,7 @@ const productos = [
     { id: 13, nombre: "Ficha RJ45", precio: 10000, img: "./img/rj45.jpg" },
     { id: 14, nombre: "Tester", precio: 10000, img: "./img/tester.jpg" },
     { id: 15, nombre: "Tester de red", precio: 10000, img: "./img/testerred.jpg" },
-    { id: 16, nombre: "Probador de cables", precio: 10000, img: "./img/viru.jpg" },
+    { id: 16, nombre: "Tester de cables", precio: 10000, img: "./img/viru.jpg" },
 ];
 
 // Carrito (inicializado desde localStorage si existe)
@@ -38,9 +38,9 @@ const renderizarProductos = () => {
             (producto) => `
       <div class="producto">
         <img src="${producto.img}" alt="${producto.nombre}" />
-        <h3>${producto.nombre}</h3>
+        <h4>${producto.nombre}</h4>
         <p>Precio: $${producto.precio}</p>
-        <button class="add-to-cart" data-id="${producto.id}">Agregar al carrito</button>
+        <button class="add-to-cart btn btn-warning" id="addCart" data-id="${producto.id}">Agregar al carrito</button>
       </div>
     `
         )
@@ -60,7 +60,7 @@ const prodFilter = (evento) => {
             (producto) => `
       <div class="producto">
         <img src="${producto.img}" alt="${producto.nombre}" />
-        <h3>${producto.nombre}</h3>
+        <h4>${producto.nombre}</h4>
         <p>Precio: $${producto.precio}</p>
         <button class="add-to-cart" data-id="${producto.id}">Agregar al carrito</button>
       </div>
@@ -105,7 +105,7 @@ const renderCart = () => {
     const totalContainer = document.querySelector("#total");
 
     if (carrito.length === 0) {
-        cartItems.innerHTML = "<li>El carrito está vacío</li>";
+        cartItems.innerHTML = "El carrito está vacío";
         totalContainer.textContent = "Total: $0";
         return;
     }
@@ -115,7 +115,7 @@ const renderCart = () => {
             (item) => `
       <li class="item-block">
         <p class="item-name">${item.nombre} (x${item.cantidad}) - $${item.precio * item.cantidad}</p>
-        <button class="delete-button" data-id="${item.id}">Eliminar</button>
+        <button class="delete-button btn btn-danger" id="delete-button" data-id="${item.id}">Quitar</button>
       </li>
     `
         )
